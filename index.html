@@ -20,22 +20,22 @@
 <body>
     <!-- navbar part start -->
     <header>
-        <nav class="bg-[#15803D] grid grid-cols-3 items-center p-4">
-            <div class="text-[18px] text-white font-semibold ml-5">Green Earth</div>
-            <div class="">
+        <nav class="bg-[#15803D] ">
+            <div class="w-21/22 mx-auto grid grid-cols-3 items-center p-4">
+                <div class="text-[18px] text-white font-semibold">Green Earth</div>
                 <div class="flex items-center justify-center gap-5 ">
-                    <a href="" class="text-[14px] text-white">About</a>
-                    <a href="" class="text-[14px] text-white">Gallery</a>
-                    <a href="" class="text-[14px] text-white">Plant a Tree</a>
+                        <a href="" class="text-[14px] text-white">About</a>
+                        <a href="" class="text-[14px] text-white">Gallery</a>
+                        <a href="" class="text-[14px] text-white">Plant a Tree</a>
                 </div>
-            </div>
-            <div class="flex justify-end">
-                <button class="btn text-[14px] text-[#15803D] bg-[#facc15] rounded-3xl mr-5">Plant a Tree</button>
+                <div class="flex justify-end">
+                    <button class="btn text-[14px] text-[#15803D] bg-[#facc15] rounded-3xl">Plant a Tree</button>
+                </div>
             </div>
         </nav>
     </header>
     <!-- banner section start -->
-    <section class="bg-[#cff0dc] grid grid-cols-3 gap-6 items-center">
+    <section class="bg-[#cff0dc] grid grid-cols-3 gap-5 items-center">
         <div class="">
             <img src="./assets/hero-leaf1.png" alt="">
         </div>
@@ -49,7 +49,33 @@ generations.</p>
             <img src="./assets/hero-leaf2.png" alt="">
         </div>
     </section>
-
+    <!-- main part or functional part -->
+     <section class="border-2 border-red-600 w-21/22 mx-auto grid grid-cols-12 mt-20">
+        <div class="border-2 border-black col-span-2"></div>
+        <div class="border-2 border-blue-600 col-span-8"></div>
+        <div class="border-2 border-orange-600 col-span-2"></div>
+     </section>
+     <!-- about campaign -->
+      <section class="mt-20 w-21/22 mx-auto mb-20">
+        <h2 class="text-[30px] font-semibold text-center">About the Campaign</h2>
+        <div class="grid grid-cols-12 items-center justify-center mx-auto gap-4 mt-5"> 
+            <div class="col-span-2"></div>
+            <div class="col-span-4">
+                <img src="./assets/about.png" alt="" class="h-[425px] w-[450px] shadow-xl">
+            </div>
+            <div class="col-span-4 space-y-5">
+                <p class="text-[15px] text-gray-500">
+                    Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.
+                </p>
+                <ul class="text-[15px] text-gray-500 list-disc ml-6 space-y-1">
+                    <li class="">Restoration of natural habitats</li>
+                    <li class="">Improvement of air quality</li>
+                    <li class="">Support for local communities</li>
+                </ul>
+            </div>
+            <div class="col-span-2"></div>
+        </div>
+      </section>
 
 
     <script src="./script.js"></script>
