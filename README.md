@@ -1,7 +1,7 @@
 
 
 
-# 1) What is the difference between var, let, and const?
+# 📝1) What is the difference between var, let, and const?
 
 There is some major difference among var, let and constvar was used in old JavaScript but after the ES6 let and const os always benn used.
 
@@ -72,7 +72,7 @@ let can also be declared without initializing any value
 
 You can not declare a const without initializing any value.
 
-# 2) What is the difference between map(), forEach(), and filter()? 
+# 📝2) What is the difference between map(), forEach(), and filter()? 
 
 ### This three are array methods. This three do loop on the given array. But after looping through an array their work is different than each other.
 
@@ -114,7 +114,7 @@ It also return a new array. But  you use filter when you want new array with all
 
 You want a new array those who are greyyer than 10 with the elements of the original array.
 
-# 3) What are arrow functions in ES6?
+# 📝3) What are arrow functions in ES6?
 
 ##### An arrow function is also a function that works like the old function
 
@@ -135,7 +135,7 @@ So why we used it or should use it .The are several reasons behind it
 
 2. Less code means that your code will be more  clean and clear . It will really help you to  explain the code to your team. 
 
-# 4) How does destructuring assignment work in ES6?
+# 📝4) How does destructuring assignment work in ES6?
 
 ## 🔥Destructuring Assignment 
 
@@ -176,5 +176,71 @@ that will do the same work as before
 `const { name, age } = { name: "Ashique", age: 21 };`
 
 
-# 5) Explain template literals in ES6. How are they different from string concatenation?
+# 📝5) Explain template literals in ES6. How are they different from string concatenation?
 
+#### Template literal is a new feature in ES6. It is new way to write string.
+
+#### Instead of using quotes *(" ')* we have to use backticks *(``)*
+
+
+### 🔥Syntax
+
+##### Means before we have code so messy to add a variable in a string 
+
+#### 👉Example 
+
+`const name = "Ashique";`
+`const age = 17.9;`
+
+
+`const oldStr = "My name is " + name + " and I am " + age + " years old.";`
+
+
+
+
+
+##### but with template literal we can code or write that string without messy code. we have to use ${} to write a variable or we can also use more complex things like functions.
+
+
+
+### 🔥Multiple line 
+
+##### Before if we want write a content with several lines like a poem , we have to use \n and +
+
+#### 👉Example
+
+
+`const poem1 = "My name is Malik\n" +`
+
+ `             "I read in class 5\n" +`
+
+`              "JS is fun but also hard\n" +`
+
+ `             "bye ";`
+
+
+
+
+##### With template literal We can do the same thing but more easily
+
+#### 👉Example 
+
+
+##### const poem2 = `My name is Malik
+
+##### I read in class 5
+
+##### JS is fun but also hard
+
+##### bye`;
+
+
+### 🔥Calculate 
+
+##### We can not calculate direct in the before temple literal bit now we can easily do calculate with {}
+
+#### 👉Example 
+
+##### const a = 10;
+##### const s = 20;
+##### console.log(`The sum is ${a + s}`);
