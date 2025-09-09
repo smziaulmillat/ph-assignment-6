@@ -137,6 +137,43 @@ So why we used it or should use it .The are several reasons behind it
 
 # 4) How does destructuring assignment work in ES6?
 
+## 🔥Destructuring Assignment 
+
+#### It is a important and new feature that is really important and useful
+
+##### We can do Destructiring with array and objects
+
+### 🔥Array Destructiring 
+
+When we want to store a element  in a variable but we can do that easily with Destructiring.
+
+` const arr =[1,2,3,4]`
+
+`const one =arr[0] `
+
+`const aecond =arr[1] `
+
+##### before Destructuring we have to follow the upper way,but now
+
+`const [one,second]=arr;`
+
+that will do the same work as before
+
+### 🔥Object Destructiring
+
+##### We can do the same thing with object also
+
+#### 👉Before
+
+`const person = { name: "Ashique", age: 21 };`
+
+`const name = person.name;`
+
+`const age = person.age;`
+
+#### 👉After
+
+`const { name, age } = { name: "Ashique", age: 21 };`
 
 
 # 5) Explain template literals in ES6. How are they different from string concatenation?
