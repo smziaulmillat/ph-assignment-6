@@ -12,32 +12,35 @@ const loadingSpinner= (status)=>{
     if(status === true){
         document.getElementById('spinner').classList.remove('hidden')
         document.getElementById('all-plants-container').classList.add('hidden')
+        document.getElementById('all-plants-container').classList.remove('grid')
         document.getElementById('choise-y-tree').classList.add('hidden')
     }
     if(status === false){
         document.getElementById('spinner').classList.add('hidden')
         document.getElementById('all-plants-container').classList.remove('hidden')
+        document.getElementById('all-plants-container').classList.add('grid')
         document.getElementById('choise-y-tree').classList.remove('hidden')
     }
 }
-const loadingSpinnerf= (status)=>{
-    if(status === true){
-        document.getElementById('spinner').classList.remove('hidden')
-        document.getElementById('all-plants-container').classList.add('hidden')
-        // document.getElementById('choise-y-tree').classList.add('hidden')
-    }
-    if(status === false){
-        document.getElementById('spinner').classList.add('hidden')
-        document.getElementById('all-plants-container').classList.remove('hidden')
-        // document.getElementById('choise-y-tree').classList.remove('hidden')
-    }
-}
+// const loadingSpinnerF= (status)=>{
+//     if(status === true){
+//         document.getElementById('spinner').classList.remove('hidden')
+//         document.getElementById('all-plants-container').classList.add('hidden')
+//         document.getElementById('choise-y-tree').classList.add('hidden')
+//     }
+//     if(status === false){
+//         document.getElementById('spinner').classList.add('hidden')
+//         document.getElementById('all-plants-container').classList.remove('hidden')
+//         document.getElementById('choise-y-tree').classList.remove('hidden')
+//     }
+// }
 
 const allPlantsLoad = () =>{
     loadingSpinner(true)
     fetch('https://openapi.programming-hero.com/api/plants')
     .then((res)=> res.json())
     .then((data)=> {
+        loadingSpinner(false)
         allPlantsShow(data.plants)
         // showModel(data.plants)
     })
@@ -49,6 +52,7 @@ const allPlantsLoad = () =>{
 
 const allPlantsShow= (plants) =>{
     // console.log(plants)
+    allPlantsContainer.innerHTML=''
     for(const plant of plants){
         
         const description = plant.description
@@ -78,7 +82,7 @@ const allPlantsShow= (plants) =>{
         `
        
     }
-    loadingSpinner(false)
+    
 }
 
 // const cartAddParentF = ()=>{
@@ -142,10 +146,11 @@ const showCategories = (categories)=> {
 }
 
 const loadPlantByCategories= (catsid)=>{
-    loadingSpinnerf(true)
+    loadingSpinner(true)
     fetch(`https://openapi.programming-hero.com/api/category/${catsid}`)
     .then((res)=> res.json())
     .then((data)=> {
+        loadingSpinner(false)
         showPlantByCategories(data.plants)
     })
     
@@ -167,13 +172,13 @@ const showPlantByCategories = (plantsCat)=>{
         
         allPlantsContainer.innerHTML += `
         
-        <div class="rounded-3xl shadow-lg overflow-hidden h-[400px]">
-        <img src=${plant.image} alt="" class="h-[190px] w-full object-cover">
-        <div id="${plant.id}" class="p-5 space-y-2">
-        <h2 id="treeModal" class="text-[18px] font-semibold">${plant.name}</h2>
+                 <div class="rounded-3xl shadow-lg overflow-hidden w-[180px] lg:h-[400px] lg:w-full">
+        <img src=${plant.image} alt="" class="h-[100px]  w-[180px] object-cover lg:h-[190px] lg:w-full ">
+        <div id="${plant.id}" class="p-2 lg:p-5 space-y-2">
+        <h2 class="text-[18px] font-semibold">${plant.name}</h2>
         <p class="text-[12px] font-normal">${shortDescription}...</</p>
         <div class="flex items-center justify-between">
-        <p class="text-[15px] text-[#15803D] bg-[#DCFCE7] rounded-3xl p-2">${plant.category}</p>
+        <p class="text-[12px] lg:text-[15px] text-[#15803D] bg-[#DCFCE7] rounded-3xl lg:p-2">${plant.category}</p>
         <p class="text-[15px]">$<span>${plant.price}</span></p>
         </div>
         <button class="btn text-[14px] text-white bg-[#15803D] rounded-3xl w-full">Add To Cart</button>
@@ -186,7 +191,7 @@ const showPlantByCategories = (plantsCat)=>{
     
     
     
-    loadingSpinnerf(false)
+    
 }
 const cartAddParentFunc =()=>{
 allPlantsContainer.addEventListener('click',(e)=>{
@@ -229,12 +234,12 @@ const showTreeDetail = (plant)=>{
     newsDetailContainer.showModal()
 
         modalContainer.innerHTML = `
-        <div class="rounded-xl shadow-lg overflow-hidden space-y-2">
-        <h2 id="treeModal" class="text-[18px] font-semibold">Name: ${plant.name}</h2>
+        <div class="rounded-xl  overflow-hidden space-y-2 p-2">
+        <h2 id="treeModal" class="text-[25px] font-semibold text-center">${plant.name}</h2>
         <img src=${plant.image} alt="" class="h-[190px] w-full object-cover rounded-xl">
         <p class="text-[15px] text-[#15803D] bg-[#DCFCE7] rounded-xl p-2">Category: ${plant.category}</p>
-        <p class="text-[15px]">$<span>Price: ${plant.price}</span></p>
-        <p class="text-[12px] font-normal">Description: ${plant.description}</</p>
+        <p class="text-[15px]"><span>Price: $${plant.price}</span></p>
+        <p class="text-[17px] font-normal">Description: ${plant.description}</</p>
         
         
     

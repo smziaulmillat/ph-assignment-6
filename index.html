@@ -21,15 +21,15 @@
     <!-- navbar part start -->
     <header>
         <nav class="bg-[#15803D] ">
-            <div class="flex flex-col items-center justify-center lg:w-21/22 lg:mx-auto lg:grid grid-cols-3 lg:items-center p-4">
-                <div class="border-2 border-red-600 text-[18px] text-white font-semibold text-center  lg:text-left">Green Earth</div>
-                <div class="flex items-center justify-center gap-5 text-center">
+            <div class="flex flex-col items-center justify-center space-y-5 lg:space-y-0 lg:w-21/22 lg:mx-auto lg:grid grid-cols-3 lg:items-center p-4">
+                <div class="text-[18px] text-white font-semibold text-center  lg:text-left">Green Earth</div>
+                <div class="flex items-center justify-center gap-15 lg:gap-5 text-center">
                         <a href="" class="text-[14px] text-white">About</a>
                         <a href="" class="text-[14px] text-white">Gallery</a>
                         <a href="" class="text-[14px] text-white">Plant a Tree</a>
                 </div>
                 <div class=" text-center lg:flex justify-end">
-                    <button class="btn text-[14px] text-[#15803D] bg-[#facc15] rounded-3xl">Plant a Tree</button>
+                    <button class="btn text-[12px] lg:text-[14px] text-[#15803D] bg-[#facc15] rounded-3xl">Plant a Tree</button>
                 </div>
             </div>
         </nav>
@@ -43,8 +43,8 @@
             <img src="./assets/hero-leaf1.png" alt="" class="">
         </div>
         <div class="text-center lg:space-y-4">
-            <h2 class="text-[24px] lg:text-[33px] font-bold">Plant a Tree, Grow a Future</h2>
-            <p class="text-[10px] lg:text-[14px]">Join our mission to plant 1 million trees and make the Earth greener for future
+            <h2 class="text-[18px] lg:text-[33px] font-bold">Plant a Tree, Grow a Future</h2>
+            <p class="text-[12px] lg:text-[14px]">Join our mission to plant 1 million trees and make the Earth greener for future
 generations.</p>
             <button class="btn text-[12px] text-[#15803D] bg-[#facc15] rounded-3xl lg:text-[14px]">Get Involved</button>
         </div>
@@ -58,7 +58,7 @@ generations.</p>
    
     <!-- main part or functional part -->
       <!-- all Categories -->
-     <section class="w-41/42 lg:w-21/22 mx-auto mt-20 lg:grid grid-cols-12 ">
+     <section class="w-41/42 space-y-10 lg:w-21/22 mx-auto mt-20 lg:grid grid-cols-12 ">
         <div class="mr-2 col-span-2">
             <h1 class="text-[20px] font-semibold text-center">Categories</h1>
             <!-- <p class="text-[17px] text-white bg-[#15803D] rounded-sm w-full p-2 mt-3 mb-3 text-center">All Trees</p> -->
@@ -70,12 +70,12 @@ generations.</p>
 
         </div>
         <!-- all plants -->
-          <div id="spinner" class="flex items-center justify-center col-span-8">
+          <div id="spinner" class="flex items-center justify-center col-span-8 hidden">
     <span class="loading loading-bars loading-xl"></span>
    </div>
    <div class="col-span-8">
-     <h1 id="choise-y-tree" class="text-[20px] font-semibold text-center">Choose Your Trees</h1>
-        <div id="all-plants-container" class="mr-2 grid grid-cols-2 lg:grid lg:grid-cols-3 gap-4">
+       <h1 id="choise-y-tree" class="text-[20px] font-semibold text-center">Choose Your Trees</h1>
+        <div id="all-plants-container" class="mr-2 grid grid-cols-2  lg:grid-cols-3 gap-4">
 
           <!-- <div class="rounded-3xl shadow-lg overflow-hidden">
             <img src="./assets/about.png" alt="" class="">
@@ -121,11 +121,11 @@ generations.</p>
     
      <!-- about campaign -->
       <section class="mt-20 w-21/22 mx-auto mb-20">
-        <h2 class="text-[30px] font-semibold text-center">About the Campaign</h2>
-        <div class="grid grid-cols-12 items-center justify-center mx-auto gap-4 mt-5"> 
+        <h2 class="text-[20px] lg:text-[30px] font-semibold text-center">About the Campaign</h2>
+        <div class="lg:grid grid-cols-12 items-center justify-center mx-auto gap-4 mt-5"> 
             <div class="col-span-2"></div>
-            <div class="col-span-4">
-                <img src="./assets/about.png" alt="" class="h-[425px] w-[450px] shadow-xl">
+            <div class="col-span-4 mb-7">
+                <img src="./assets/about.png" alt="" class="mx-auto h-[325px] lg:h-[425px] w-[350px] lg:w-[450px] shadow-2xl">
             </div>
             <div class="col-span-4 space-y-5">
                 <p class="text-[15px] text-gray-500">
@@ -145,20 +145,20 @@ generations.</p>
     
     
       <!-- our impact start -->
-     <section class="bg-[#cff0dc] text-center h-[310px] flex flex-col items-center justify-center space-y-5">
-        <h2 class="text-[30px] font-semibold">Our Impact</h2>
+     <section class="bg-[#cff0dc] text-center h-[230px] lg:h-[310px] flex flex-col items-center justify-center space-y-5">
+        <h2 class="text-[20px] lg:text-[30px] font-semibold">Our Impact</h2>
         <div class="w-21/22 mx-auto grid grid-cols-3 gap-3">
-            <div class="bg-white h-[110px] flex flex-col items-center justify-center shadow-md btn hover:bg-[#4aeb85]">
-                <h2 class="text-[30px] font-semibold text-[#15803D]">500K+</h2>
-                <p class="text-[15px] text-gray-500">Trees Planted</p>
+            <div class="bg-white h-[90px] lg:h-[110px] flex flex-col items-center justify-center shadow-md btn hover:bg-[#4aeb85] p-[2px] lg:p-3">
+                <h2 class="text-[17px] lg:text-[30px] font-semibold text-[#15803D]">500K+</h2>
+                <p class="text-[12px] lg:text-[15px] text-gray-500">Trees Planted</p>
             </div>
-            <div class="bg-white h-[110px] flex flex-col items-center justify-center shadow-md btn hover:bg-[#4aeb85]">
-                <h2 class="text-[30px] font-semibold text-[#15803D]">120+</h2>
-                <p class="text-[15px] text-gray-500">Communities Involved</p>
+            <div class="bg-white h-[90px] lg:h-[110px] flex flex-col items-center justify-center shadow-md btn hover:bg-[#4aeb85] p-[2px] lg:p-3">
+                <h2 class="text-[17px] lg:text-[30px] font-semibold text-[#15803D]">120+</h2>
+                <p class="text-[12px] lg:text-[15px] text-gray-500">Communities Involved</p>
             </div>
-            <div class="bg-white h-[110px] flex flex-col items-center justify-center shadow-md btn hover:bg-[#4aeb85]">
-                <h2 class="text-[30px] font-semibold text-[#15803D]">30+</h2>
-                <p class="text-[15px] text-gray-500">Countries Reached</p>
+            <div class="bg-white h-[90px] lg:h-[110px] flex flex-col items-center justify-center shadow-md btn hover:bg-[#4aeb85] p-[2px] lg:p-3">
+                <h2 class="text-[17px] lg:text-[30px] font-semibold text-[#15803D]">30+</h2>
+                <p class="text-[12px] lg:text-[15px] text-gray-500">Countries Reached</p>
             </div>
         </div>
      </section>
@@ -167,9 +167,9 @@ generations.</p>
     
     
      <!-- plant a tree today part -->
-     <section class="bg-[#166534] text-center h-[480px] flex flex-col items-center justify-center space-y-5">
-        <h2 class="text-[30px] font-medium text-white">Plant a Tree Today</h2>
-            <div class="flex flex-col items-center  bg-[#15803D] lg:w-[400px] h-[300px] p-6 space-y-5 mx-auto rounded-lg">
+     <section class="bg-[#166534] text-center h-[390px] lg:h-[480px] flex flex-col items-center justify-center space-y-5">
+        <h2 class="text-[20px] lg:text-[30px] font-medium text-white">Plant a Tree Today</h2>
+            <div class="flex flex-col items-center  bg-[#15803D] lg:w-[400px] h-[260px] lg:h-[300px] p-4 lg:p-6 space-y-3 lg:space-y-5 mx-auto rounded-lg">
                 <input type="text" placeholder="Your Name" class="input input-bordered w-full" />
                 <input type="text" placeholder="Your Email Address" class="input input-bordered w-full" />
                 <select class="select select-bordered w-full">
@@ -178,7 +178,7 @@ generations.</p>
                  <option>5 Tree - 100$</option>
                  <option>10 Tree - 175$</option>
                 </select>
-                <button class="btn text-[14px] text-[#15803D] bg-[#facc15] rounded-3xl w-full mt-5">Donate Now</button>
+                <button class="btn text-[14px] text-[#15803D] bg-[#facc15] rounded-3xl w-full mt-3 lg:mt-5">Donate Now</button>
             </div>
      </section>
     
